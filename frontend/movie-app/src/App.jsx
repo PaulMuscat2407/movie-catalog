@@ -37,10 +37,7 @@ function App() {
     }
     
     return movies.filter(movie =>
-      movie.title.toLowerCase().includes(searchText.toLowerCase()) ||
-      movie.director.toLowerCase().includes(searchText.toLowerCase()) ||
-      movie.actors.some(actor => actor.toLowerCase().includes(searchText.toLowerCase())) ||
-      movie.genre.some(genre => genre.toLowerCase().includes(searchText.toLowerCase()))
+      movie.title.toLowerCase().includes(searchText.toLowerCase())
     );
   }, [movies, searchText]);
 
@@ -52,6 +49,7 @@ function App() {
         
         <Box component="main" sx={{ flexGrow: 1, py: 4, bgcolor: 'background.default' }}>
           <Container maxWidth="xl">
+            <SearchBar searchText={searchText} setSearchText={setSearchText} />
             <Box sx={{ 
               display: 'grid', 
               gridTemplateColumns: { 
@@ -59,12 +57,14 @@ function App() {
                 sm: 'repeat(2, 1fr)', 
                 md: 'repeat(3, 1fr)', 
                 lg: 'repeat(4, 1fr)',
-                xl: 'repeat(5, 1fr)'
+                xl: 'repeat(4, 1fr)'
               }, 
               gap: 3,
-              px: 2
+              px: 2,
+              justifyContent: 'center',
+              mx: 'auto'
             }}>
-              {movies.map((movie, index) => (
+              {filteredMovies.map((movie, index) => (
                 <MovieCard key={index} movie={movie} />
               ))}
             </Box>

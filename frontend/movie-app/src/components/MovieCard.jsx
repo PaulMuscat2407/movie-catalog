@@ -106,6 +106,8 @@ const MovieCard = ({ movie }) => (
               display: '-webkit-box',
               WebkitLineClamp: 2,
               WebkitBoxOrient: 'vertical',
+              height: '2.8em',
+              minHeight: '2.8em'
             }}
           >
             {movie.actors.length > 2
@@ -121,16 +123,13 @@ const MovieCard = ({ movie }) => (
             key={genre}
             label={genre}
             size="small"
-            variant="outlined"
+            variant="filled"
+            color='primary'
             sx={{ 
               fontSize: '0.75rem',
               height: 24,
-              borderColor: 'primary.main',
-              color: 'primary.main',
-              '&:hover': {
-                bgcolor: 'primary.main',
-                color: 'white'
-              }
+              color: 'white',
+              cursor: 'default',
             }}
           />
         ))}

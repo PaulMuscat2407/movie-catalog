@@ -6,7 +6,7 @@ import { IconButton } from '@mui/material';
 const SearchBar = ({ searchText, setSearchText }) => (
   <Box sx={{ mb: 3, maxWidth: 600, mx: 'auto' }}>
     <TextField
-      label="Search movies by title, director, actor, or genre"
+      label="Search movies by title"
       variant="outlined"
       fullWidth
       value={searchText}
