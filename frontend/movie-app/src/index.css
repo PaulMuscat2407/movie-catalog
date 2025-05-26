@@ -15,14 +15,14 @@ body {
   min-height: 100vh;
 }
 
-/* Remove default button styles to let Material-UI handle them */
+
 button {
   border: none;
   background: none;
   font-family: inherit;
 }
 
-/* Ensure images don't exceed container */
+
 img {
   max-width: 100%;
   height: auto;

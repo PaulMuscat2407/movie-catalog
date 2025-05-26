@@ -20,14 +20,16 @@ const MovieCard = ({ movie }) => (
     <Box sx={{ height: 320, position: 'relative', overflow: 'hidden' }}>
       <CardMedia 
         component="img" 
-        image='https://via.placeholder.com/300x400/1976d2/ffffff?text=Movie+Poster' 
+        image={movie.imageUrl || 'https://picsum.photos/300/400'} 
         alt={movie.title} 
+        onError={(e) => {
+          e.target.src = 'https://picsum.photos/300/400';
+        }}
         sx={{ 
           width: '100%', 
           height: '100%', 
-          objectFit: 'cover',
-          transition: 'transform 0.3s ease',
-          '&:hover': { transform: 'scale(1.05)' }
+          objectFit: 'contain',
+          transition: 'transform 0.3s ease'
         }} 
       />
       <Box sx={{ 
@@ -76,7 +78,7 @@ const MovieCard = ({ movie }) => (
       </Typography>
 
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2, fontWeight: 500 }}>
-        {movie.year} • {movie.genre.slice(0, 2).join(', ')}
+        {movie.year} • {movie.genre.slice().join(', ')}
       </Typography>
 
       <Stack spacing={1.5} sx={{ mb: 2 }}>
@@ -118,7 +120,7 @@ const MovieCard = ({ movie }) => (
       </Stack>
 
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 'auto' }}>
-        {movie.genre.slice(0, 3).map((genre) => (
+        {movie.genre.slice().map((genre) => (
           <Chip
             key={genre}
             label={genre}
