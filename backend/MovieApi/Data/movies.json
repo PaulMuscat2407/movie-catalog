@@ -12,7 +12,8 @@
                 "Tim Robbins",
                 "Morgan Freeman"
             ],
-            "rating": 9.3
+            "rating": 9.3,
+            "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg"
         },
         {
             "title": "The Godfather",
@@ -27,7 +28,8 @@
                 "Al Pacino",
                 "James Caan"
             ],
-            "rating": 9.2
+            "rating": 9.2,
+            "imageUrl": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_FMjpg_UY1982_.jpg"
         },
         {
             "title": "The Dark Knight",
@@ -43,7 +45,8 @@
                 "Heath Ledger",
                 "Gary Oldman"
             ],
-            "rating": 9.0
+            "rating": 9.0,
+            "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
         },
         {
             "title": "Inception",
@@ -59,7 +62,8 @@
                 "Joseph Gordon-Levitt",
                 "Ellen Page"
             ],
-            "rating": 8.8
+            "rating": 8.8,
+            "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
         }
     ]
 }
